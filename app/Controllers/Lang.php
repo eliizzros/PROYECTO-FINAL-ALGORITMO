@@ -9,7 +9,6 @@ class Lang extends BaseController
         if (in_array($locale, ['en', 'es'], true)) {
             session()->set('locale', $locale);
         }
-
-        return redirect()->to('/');
+        return redirect()->back();
     }
 }

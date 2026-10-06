@@ -8,10 +8,6 @@ class Home extends BaseController
 
     public function index(): string
     {
-        $locale = session()->get('locale') ?? 'es';
-        service('request')->setLocale($locale);
-        service('language')->setLocale($locale);
-
         return view('home/index');
     }
 }

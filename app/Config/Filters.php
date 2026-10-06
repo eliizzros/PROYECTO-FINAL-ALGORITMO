@@ -24,17 +24,18 @@ class Filters extends BaseFilters
      * [filter_name => classname]
      * or [filter_name => [classname1, classname2, ...]]
      */
-    public array $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
-        'cors'          => Cors::class,
-        'forcehttps'    => ForceHTTPS::class,
-        'pagecache'     => PageCache::class,
-        'performance'   => PerformanceMetrics::class,
-    ];
+        public array $aliases = [
+            'csrf'          => CSRF::class,
+            'toolbar'       => DebugToolbar::class,
+            'honeypot'      => Honeypot::class,
+            'invalidchars'  => InvalidChars::class,
+            'secureheaders' => SecureHeaders::class,
+            'cors'          => Cors::class,
+            'forcehttps'    => ForceHTTPS::class,
+            'pagecache'     => PageCache::class,
+            'performance'   => PerformanceMetrics::class,
+            'locale'        => \App\Filters\LocaleFilter::class,
+];
 
     /**
      * List of special required filters.
@@ -71,16 +72,15 @@ class Filters extends BaseFilters
      * }
      */
     public array $globals = [
-        'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
-        ],
-        'after' => [
-            // 'honeypot',
-            // 'secureheaders',
-        ],
-    ];
+    'before' => [
+        'locale',
+    ],
+    'after' => [
+        'pagecache',
+        'performance',
+        // 'toolbar',
+    ],
+];
 
     /**
      * List of filter aliases that works on a
