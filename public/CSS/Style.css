@@ -53,3 +53,12 @@ button {
 .alert ul { margin: 0; padding-left: 1.1rem; }
 .alert.ok  { background: #dcfce7; border: 1px solid #86efac; color: #14532d; }
 .alert.err { background: #fee2e2; border: 1px solid #fca5a5; color: #7f1d1d; }
+
+nav div { align-items: center; }
+.inline { display: inline; margin: 0; }
+.linklike {
+    padding: 0;
+    background: none;
+    color: #2563eb;
+}
+.linklike:hover { text-decoration: underline; }

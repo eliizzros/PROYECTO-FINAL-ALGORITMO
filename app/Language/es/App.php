@@ -7,17 +7,25 @@ return [
     'spanish'         => 'Español',
     'signup'          => 'Registrarse',
     'login'           => 'Iniciar sesión',
+    'logout'          => 'Cerrar sesión',
+    'hello'           => 'Hola, {0}',
     'welcome'         => 'Bienvenido',
     'welcome_text'    => 'Planifica, organiza y da seguimiento a tus tareas escolares en un solo lugar.',
 
     'register_title'  => 'Registro',
+    'login_title'     => 'Iniciar sesión',
     'name'            => 'Nombre',
     'email'           => 'Correo electrónico',
     'password'        => 'Contraseña',
     'repeat_password' => 'Repetir contraseña',
     'cancel'          => 'Cancelar',
-        
+
     'registered'      => 'Cuenta creada correctamente.',
+    'login_ok'        => 'Has iniciado sesión correctamente.',
+    'logout_ok'       => 'Has cerrado sesión correctamente.',
+    'bad_credentials' => 'Correo o contraseña incorrectos.',
+    'not_active'      => 'Tu cuenta aún no está activa.',
+
     'v_required'      => '{0} es obligatorio.',
     'v_email'         => 'Ingresa un correo electrónico válido.',
     'v_unique'        => 'Ese correo ya está registrado.',

@@ -14,8 +14,16 @@
             <a href="<?= site_url('lang/es') ?>"><?= lang('App.spanish') ?></a>
         </div>
         <div>
-            <a href="<?= site_url('register') ?>"><?= lang('App.signup') ?></a>
-            <a href="#"><?= lang('App.login') ?></a>
+            <?php if (session()->get('user_id')): ?>
+                <span><?= lang('App.hello', [esc(session()->get('name'))]) ?></span>
+                <form action="<?= site_url('logout') ?>" method="post" class="inline">
+                    <?= csrf_field() ?>
+                    <button type="submit" class="linklike"><?= lang('App.logout') ?></button>
+                </form>
+            <?php else: ?>
+                <a href="<?= site_url('register') ?>"><?= lang('App.signup') ?></a>
+                <a href="<?= site_url('login') ?>"><?= lang('App.login') ?></a>
+            <?php endif ?>
         </div>
     </nav>
 
