@@ -11,5 +11,5 @@ class UserModel extends Model
     protected $returnType    = 'array';
     protected $useTimestamps = true;
 
-    protected $allowedFields = ['name', 'email', 'password', 'active', 'is_admin'];
+    protected $allowedFields = ['name', 'email', 'password', 'active', 'is_admin', 'activation_token'];
 }

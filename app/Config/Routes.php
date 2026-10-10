@@ -12,3 +12,4 @@ $routes->post('register', 'Auth::register');
 $routes->get('login', 'Auth::loginForm');
 $routes->post('login', 'Auth::login');
 $routes->post('logout', 'Auth::logout');
+$routes->get('profile', 'Profile::index', ['filter' => 'auth']);
