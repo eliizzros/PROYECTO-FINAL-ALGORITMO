@@ -82,6 +82,10 @@ class Filters extends BaseFilters
         'performance',
         // 'toolbar',
     ],
+    'before' => [
+    'locale',
+    'csrf',
+],
 ];
 
     /**

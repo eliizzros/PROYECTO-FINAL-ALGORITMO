@@ -135,7 +135,8 @@ class Auth extends BaseController
     {
         session()->remove(['user_id', 'name', 'is_admin']);
         session()->regenerate(true);
-
+        session()->remove(['user_id', 'name', 'is_admin', 'edit_ok']);
+        
         return redirect()->to('/')->with('success', lang('App.logout_ok'));
     }
 
@@ -155,8 +156,7 @@ class Auth extends BaseController
         return redirect()->to('/login')->with('success', lang('App.activated'));
     }
 
-        // ---------- CORREO ----------
-    // ---------- CORREO ----------
+    // el correo que no funcionaaaaaaaaaaaa
 private function sendMail(string $to, string $subject, string $html): bool
 {
     $email = service('email');

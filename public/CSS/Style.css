@@ -62,3 +62,27 @@ nav div { align-items: center; }
     color: #2563eb;
 }
 .linklike:hover { text-decoration: underline; }
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #fff;
+}
+.btn:hover { text-decoration: none; filter: brightness(.95); }
+
+.btn + .btn { margin-left: .5rem; }
+
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    display: block;
+    margin-bottom: .75rem;
+}
+.btn-danger { background: #dc2626; }
+button.btn-danger { color: #fff; }
