@@ -11,7 +11,7 @@ return [
     'hello'                   => 'Hola, {0}',
     'profile'                 => 'Perfil',
     'welcome'                 => 'Bienvenido',
-    'welcome_text'            => 'Planifica, organiza y da seguimiento a tus tareas escolares en un solo lugar.',
+    'welcome_text'            => 'Plataforma de tareas',
 
     'register_title'          => 'Registro',
     'login_title'             => 'Iniciar sesión',

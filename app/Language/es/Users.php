@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'title'             => 'Usuarios',
+    'new_user'          => 'Nuevo usuario',
+    'new_title'         => 'Nuevo usuario',
+    'edit_title'        => 'Editar usuario',
+    'show_title'        => 'Usuario',
+    'delete_title'      => 'Eliminar usuario',
+    'active'            => 'Activo',
+    'administrator'     => 'Administrador',
+    'created_at'        => 'Creado el',
+    'updated_at'        => 'Actualizado el',
+    'newer'             => 'Más nuevos',
+    'older'             => 'Más antiguos',
+    'yes'               => 'Sí',
+    'no'                => 'No',
+    'back_to_index'     => '<< volver al listado',
+    'delete'            => 'Eliminar',
+    'are_you_sure'      => '¿Estás seguro(a) de eliminar este usuario?',
+    'password_hint'     => 'Déjala vacía para no cambiar la contraseña.',
+    'user_created'      => 'Usuario creado correctamente.',
+    'user_updated'      => 'Usuario actualizado correctamente.',
+    'user_deleted'      => 'Usuario eliminado correctamente.',
+    'cannot_delete_self' => 'No puedes eliminar tu propia cuenta.',
+];

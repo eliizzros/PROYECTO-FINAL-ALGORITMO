@@ -16,9 +16,11 @@
         <div>
             <?php if (session()->get('user_id')): ?>
                 <span><?= lang('App.hello', [esc(session()->get('name'))]) ?></span>
-                <span><?= lang('App.hello', [esc(session()->get('name'))]) ?></span>
                 <a href="<?= site_url('profile') ?>"><?= lang('App.profile') ?></a>
-                <form action="<?= site_url('logout') ?>" method="post" class="inline">
+                <?php if (session()->get('is_admin')): ?>
+                    <a href="<?= site_url('users') ?>"><?= lang('Nav.users') ?></a>
+                <?php endif ?>
+                <a href="<?= site_url('tasks') ?>"><?= lang('Nav.tasks') ?></a>
                 <form action="<?= site_url('logout') ?>" method="post" class="inline">
                     <?= csrf_field() ?>
                     <button type="submit" class="linklike"><?= lang('App.logout') ?></button>

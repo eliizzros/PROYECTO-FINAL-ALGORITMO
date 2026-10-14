@@ -86,3 +86,16 @@ nav div { align-items: center; }
 }
 .btn-danger { background: #dc2626; }
 button.btn-danger { color: #fff; }
+
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #e5e7eb; }
+th { border-bottom: 2px solid #1f2937; }
+
+.pager { display: flex; gap: .5rem; margin-top: 1rem; }
+.btn.disabled { opacity: .4; pointer-events: none; }
+
+.form .check { display: flex; align-items: center; gap: .5rem; font-weight: 400; }
+.form input[type=checkbox] { padding: 0; width: auto; }
+.form small { color: #6b7280; }

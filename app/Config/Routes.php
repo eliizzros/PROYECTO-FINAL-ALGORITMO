@@ -27,3 +27,13 @@ $routes->get('profile/image', 'Profile::imageForm', ['filter' => 'auth']);
 $routes->post('profile/image', 'Profile::imageUpdate', ['filter' => 'auth']);
 $routes->get('profile/image/delete', 'Profile::imageDeleteForm', ['filter' => 'auth']);
 $routes->post('profile/image/delete', 'Profile::imageDelete', ['filter' => 'auth']);
+$routes->group('users', ['filter' => ['auth', 'admin']], static function ($routes) {
+    $routes->get('/', 'Users::index');
+    $routes->get('new', 'Users::newForm');
+    $routes->post('new', 'Users::create');
+    $routes->get('(:num)', 'Users::show/$1');
+    $routes->get('(:num)/edit', 'Users::editForm/$1');
+    $routes->post('(:num)/edit', 'Users::update/$1');
+    $routes->get('(:num)/delete', 'Users::deleteForm/$1');
+    $routes->post('(:num)/delete', 'Users::delete/$1');
+});

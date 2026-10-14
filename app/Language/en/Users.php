@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'title'             => 'Users',
+    'new_user'          => 'New user',
+    'new_title'         => 'New user',
+    'edit_title'        => 'Edit user',
+    'show_title'        => 'User',
+    'delete_title'      => 'Delete user',
+    'active'            => 'Active',
+    'administrator'     => 'Administrator',
+    'created_at'        => 'Created at',
+    'updated_at'        => 'Updated at',
+    'newer'             => 'Newer',
+    'older'             => 'Older',
+    'yes'               => 'Yes',
+    'no'                => 'No',
+    'back_to_index'     => '<< back to index',
+    'delete'            => 'Delete',
+    'are_you_sure'      => 'Are you sure you want to delete this user?',
+    'password_hint'     => 'Leave it empty to keep the current password.',
+    'user_created'      => 'User created successfully.',
+    'user_updated'      => 'User updated successfully.',
+    'user_deleted'      => 'User deleted successfully.',
+    'cannot_delete_self' => 'You cannot delete your own account.',
+];

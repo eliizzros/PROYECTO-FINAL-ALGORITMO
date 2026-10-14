@@ -37,6 +37,7 @@ class Filters extends BaseFilters
             'locale'        => \App\Filters\LocaleFilter::class,
 
             'auth' => \App\Filters\AuthFilter::class,
+            'admin' => \App\Filters\AdminFilter::class,
 ];
 
     /**
