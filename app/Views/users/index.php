@@ -32,8 +32,8 @@
 
     <div class="pager">
         <a href="<?= site_url('users?page=' . ($page - 1)) ?>"
-           class="btn <?= $hasNewer ? '' : 'disabled' ?>"><?= lang('Users.newer') ?></a>
+            class="btn <?= $hasNewer ? '' : 'disabled' ?>"><?= lang('Users.newer') ?></a>
         <a href="<?= site_url('users?page=' . ($page + 1)) ?>"
-           class="btn <?= $hasOlder ? '' : 'disabled' ?>"><?= lang('Users.older') ?></a>
+        class="btn <?= $hasOlder ? '' : 'disabled' ?>"><?= lang('Users.older') ?></a>
     </div>
 <?= $this->endSection() ?>

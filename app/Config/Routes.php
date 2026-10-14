@@ -37,3 +37,14 @@ $routes->group('users', ['filter' => ['auth', 'admin']], static function ($route
     $routes->get('(:num)/delete', 'Users::deleteForm/$1');
     $routes->post('(:num)/delete', 'Users::delete/$1');
 });
+
+$routes->group('tasks', ['filter' => 'auth'], static function ($routes) {
+    $routes->get('/', 'Tasks::index');
+    $routes->get('new', 'Tasks::newForm');
+    $routes->post('new', 'Tasks::create');
+    $routes->get('(:num)', 'Tasks::show/$1');
+    $routes->get('(:num)/edit', 'Tasks::editForm/$1');
+    $routes->post('(:num)/edit', 'Tasks::update/$1');
+    $routes->get('(:num)/delete', 'Tasks::deleteForm/$1');
+    $routes->post('(:num)/delete', 'Tasks::delete/$1');
+});
