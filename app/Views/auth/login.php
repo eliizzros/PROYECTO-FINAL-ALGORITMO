@@ -12,9 +12,14 @@
         <label for="password"><?= lang('App.password') ?></label>
         <input type="password" id="password" name="password">
 
+        <label class="check">
+            <input type="checkbox" name="remember" value="1">
+            <?= lang('Auth.remember_me') ?>
+        </label>
+
         <div class="actions">
             <button type="submit"><?= lang('App.login') ?></button>
-            <a href="<?= site_url('/') ?>"><?= lang('App.cancel') ?></a>
+            <a href="<?= site_url('forgot') ?>"><?= lang('Auth.forgot_link') ?></a>
         </div>
     </form>
 <?= $this->endSection() ?>

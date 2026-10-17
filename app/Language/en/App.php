@@ -32,7 +32,7 @@ return [
     'cancel'                  => 'Cancel',
 
     'registered'              => 'Account created. Check your email and follow the link to activate it.',
-    'mail_failed'             => 'Account created, but the activation email could not be sent.',
+    'mail_failed'             => 'Creat the account but the email cannot be send',
     'activated'               => 'Your account has been activated. You can now log in.',
     'activation_invalid'      => 'The activation link is invalid or was already used.',
     'login_ok'                => 'You have logged in successfully.',

@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('lang/(en|es)', 'Lang::set/$1');
 $routes->get('register', 'Auth::registerForm');
 $routes->post('register', 'Auth::register');
+$routes->get('activate/(:segment)', 'Auth::activate/$1');
 $routes->get('login', 'Auth::loginForm');
 $routes->post('login', 'Auth::login');
 $routes->post('logout', 'Auth::logout');
@@ -19,10 +20,6 @@ $routes->get('profile/edit', 'Profile::editForm', ['filter' => 'auth']);
 $routes->post('profile/edit', 'Profile::update', ['filter' => 'auth']);
 $routes->get('profile/password', 'Profile::passwordForm', ['filter' => 'auth']);
 $routes->post('profile/password', 'Profile::passwordUpdate', ['filter' => 'auth']);
-$routes->get('profile/image', 'Profile::imageForm', ['filter' => 'auth']);
-$routes->post('profile/image', 'Profile::imageUpdate', ['filter' => 'auth']);
-$routes->get('profile/image/delete', 'Profile::imageDeleteForm', ['filter' => 'auth']);
-$routes->post('profile/image/delete', 'Profile::imageDelete', ['filter' => 'auth']);
 $routes->get('profile/image', 'Profile::imageForm', ['filter' => 'auth']);
 $routes->post('profile/image', 'Profile::imageUpdate', ['filter' => 'auth']);
 $routes->get('profile/image/delete', 'Profile::imageDeleteForm', ['filter' => 'auth']);
@@ -48,3 +45,11 @@ $routes->group('tasks', ['filter' => 'auth'], static function ($routes) {
     $routes->get('(:num)/delete', 'Tasks::deleteForm/$1');
     $routes->post('(:num)/delete', 'Tasks::delete/$1');
 });
+
+$routes->get('login', 'Auth::loginForm');
+$routes->post('login', 'Auth::login');
+
+$routes->get('forgot', 'Auth::forgotForm');
+$routes->post('forgot', 'Auth::forgot');
+$routes->get('reset/(:segment)', 'Auth::resetForm/$1');
+$routes->post('reset/(:segment)', 'Auth::reset/$1');
